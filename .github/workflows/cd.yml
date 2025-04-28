@@ -1,4 +1,4 @@
-name: Deploy
+name: Deployment
 
 on:
     push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   tests:
-    name: Tests
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
