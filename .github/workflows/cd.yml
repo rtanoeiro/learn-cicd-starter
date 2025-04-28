@@ -1,8 +1,9 @@
-name: deployment
+name: Deploy
 
 on:
     push:
       branches: [main]
+
 jobs:
   tests:
     name: Tests
@@ -11,11 +12,11 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-
+  
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: "1.23.0"
-    
+      
       - name: build
         run: ./scripts/buildprod.sh
